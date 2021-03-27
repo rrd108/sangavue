@@ -59,6 +59,8 @@ button {
   color: #fff;
   padding: .3rem 1.3rem;
   border: none;
+  transition: background 350ms ease-in-out;
+  cursor: pointer;
 }
 
 button:hover {
