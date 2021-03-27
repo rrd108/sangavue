@@ -1,31 +1,67 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <Login v-if="!isLoggedIn" />
+    <div v-if="isLoggedIn">
+      <nav>
+        <router-link to="/">Home</router-link>
+      </nav>
+      <main>
+        <router-view/>
+      </main>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import Login from '@/components/Login'
+
+export default {
+  name: 'App',
+  components: {Login},
+  data() {
+    return {
+      isLoggedIn: false,
+    }
+  }
+}
+</script>
+
 <style>
-/* 15848f-e5d580-2d2d2a-7c6a0a-eb6424 */
-#app {
+/* 15848f-e5d580-eb6424 */
+body {
+  margin: 0;
+}
+
+#app, input {
   font-family: 'Quicksand', sans-serif;
-  text-align: center;
   color: #2d2d2a;
 }
 
-#nav {
+#app {
+  padding: 1rem;
+}
+
+nav {
   padding: 30px;
 }
 
-#nav a {
+nav a {
   font-weight: bold;
   color: #7c6a0a;
 }
 
-#nav a.router-link-exact-active {
+nav a.router-link-exact-active {
   color: #eb6424;
+}
+
+button {
+  background: #15848f;
+  color: #fff;
+  padding: .3rem 1.3rem;
+  border: none;
+}
+
+button:hover {
+  background: #eb6424;
 }
 </style>
