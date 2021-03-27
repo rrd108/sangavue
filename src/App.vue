@@ -11,6 +11,7 @@
 <style>
 /* 15848f-e5d580-2d2d2a-7c6a0a-eb6424 */
 #app {
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   color: #2d2d2a;
 }
