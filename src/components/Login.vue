@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <form id="login" @submit.prevent="login">
     <div>
       <img src="@/assets/logo.png" alt="logo">
     </div>
@@ -17,16 +17,21 @@
     <div>
       Pass Reminder
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
 export default {
   name: 'Login',
-    data() {
+  data() {
     return {
       email: '',
       password: '',
+    }
+  },
+  methods: {
+    login() {
+      console.log('TODO get token')
     }
   }
 }
