@@ -73,7 +73,8 @@ class Application extends BaseApplication
         $authenticators['Form']['fields']['username'] = 'email';
         Configure::write('Auth.Authenticators', $authenticators);
 
-        $this->addPlugin(\CakeDC\Users\Plugin::class);
+        Configure::write('Users.config', ['users']);
+        $this->addPlugin(\CakeDC\Users\Plugin::class, ['routes' => true, 'bootstrap' => true]);
     }
 
     /**
@@ -109,9 +110,9 @@ class Application extends BaseApplication
 
             // Cross Site Request Forgery (CSRF) Protection Middleware
             // https://book.cakephp.org/4/en/controllers/middleware.html#cross-site-request-forgery-csrf-middleware
-            ->add(new CsrfProtectionMiddleware([
+            /*->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
-            ]));
+            ]))*/;
 
         return $middlewareQueue;
     }
