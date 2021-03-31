@@ -13,8 +13,15 @@ class AppUsersController extends UsersController
     if ($this->components()->has('Security')) {
       $this->Security->setConfig(
         'unlockedActions',
-        ['login']
+        ['login', 'getToken']
       );
     }
+  }
+
+  public function getToken()
+  {
+    $user = $this->Auth->identify();
+    $this->set(compact('user'));
+    $this->set('_serialize', 'user');
   }
 }

@@ -59,6 +59,7 @@ return [
             'action' => [
                 // LoginTrait
                 'login',
+                'get-token',
                 'logout',
                 'verify',
                 // RegisterTrait
