@@ -73,6 +73,8 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
 
         // Load more plugins here
         $this->addPlugin('Authentication');
+        Configure::load('cors', 'default', false);
+        $this->addPlugin('Cors');
     }
 
     /**
