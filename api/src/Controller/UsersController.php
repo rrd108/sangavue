@@ -20,8 +20,15 @@ class UsersController extends AppController
     public function login()
     {
         $result = $this->Authentication->getResult();
-        $this->set(compact('result'));
-        $this->viewBuilder()->setOption('serialize', 'result');
+        if ($result->isValid()) {
+            $data = ['token' => $this->Authentication->getIdentity()->get('token')];
+            $this->set(compact('data'));
+            $this->viewBuilder()->setOption('serialize', 'data');
+        }
+        if ($this->request->is('post') && !$result->isValid()) {
+            $response = $this->response->withStatus(401, 'Invalid email or password');
+            return $response;
+        }
         /*
         // If the user is logged in send them away.
         if ($result->isValid()) {

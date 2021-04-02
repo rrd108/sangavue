@@ -182,7 +182,6 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 'controller' => 'Users',
                 'action' => 'login',
                 '_ext' => 'json',
-                '_full' => true
             ]),
         ]);
 
