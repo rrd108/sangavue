@@ -157,23 +157,12 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     {
         $service = new AuthenticationService();
 
-        // Define where users should be redirected to when they are not authenticated
-        /*$service->setConfig([
-            'unauthenticatedRedirect' => Router::url([
-                    'prefix' => false,
-                    'plugin' => null,
-                    'controller' => 'Users',
-                    'action' => 'login',
-            ]),
-            'queryParam' => 'redirect',
-        ]);*/
-
         $fields = [
             IdentifierInterface::CREDENTIAL_USERNAME => 'email',
             IdentifierInterface::CREDENTIAL_PASSWORD => 'password'
         ];
+
         // Load the authenticators. Session should be first.
-        //$service->loadAuthenticator('Authentication.Session');
         $service->loadAuthenticator('Authentication.Form', [
             'fields' => $fields,
             'loginUrl' => Router::url([
@@ -184,10 +173,14 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 '_ext' => 'json',
             ]),
         ]);
+        $service->loadAuthenticator('Authentication.Token', [
+            'header' => 'Authorization',
+            'tokenPrefix' => 'Token'
+        ]);
 
         // Load identifiers
         $service->loadIdentifier('Authentication.Password', compact('fields'));
-        // TODO add token https://book.cakephp.org/authentication/2/en/identifiers.html#token
+        $service->loadIdentifier('Authentication.Token');
 
         return $service;
     }
