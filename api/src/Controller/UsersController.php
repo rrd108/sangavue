@@ -29,16 +29,6 @@ class UsersController extends AppController
             $response = $this->response->withStatus(401, 'Invalid email or password');
             return $response;
         }
-        /*
-        // If the user is logged in send them away.
-        if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/home';
-            return $this->redirect($target);
-        }
-        if ($this->request->is('post') && !$result->isValid()) {
-            $this->Flash->error('Invalid username or password');
-        }
-        */
     }
 
     /**
