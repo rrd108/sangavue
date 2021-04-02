@@ -73,8 +73,8 @@ class Application extends BaseApplication
         $authenticators['Form']['fields']['username'] = 'email';
         Configure::write('Auth.Authenticators', $authenticators);
 
-        Configure::write('Users.config', ['users']);
         $this->addPlugin(\CakeDC\Users\Plugin::class, ['routes' => true, 'bootstrap' => true]);
+        Configure::write('Users.config', ['users']);
     }
 
     /**
