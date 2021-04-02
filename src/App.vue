@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Login v-if="!isLoggedIn" />
-    <div v-if="isLoggedIn">
+    <Login v-if="!$store.state.token" />
+    <div v-if="$store.state.token">
       <nav>
         <router-link to="/">Home</router-link>
       </nav>
@@ -20,7 +20,6 @@ export default {
   components: {Login},
   data() {
     return {
-      isLoggedIn: false,
     }
   }
 }

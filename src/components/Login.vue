@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     login() {
-      console.log('TODO get token')
       axios({
             method: 'post',
             url: `${process.env.VUE_APP_API_URL}users/login.json`,
