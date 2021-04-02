@@ -31,6 +31,8 @@ class UsersController extends AppController
         }
     }
 
+    // TODO remove these functions
+
     /**
      * Index method
      *
@@ -41,6 +43,7 @@ class UsersController extends AppController
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
+        $this->viewBuilder()->setOption('serialize', 'users');
     }
 
     /**
