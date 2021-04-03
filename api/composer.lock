@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7fcce51dabd0fee24ad9f55e283ef21",
+    "content-hash": "1fbf06fcf8aae90e2f88dbc889e34fcd",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -76,16 +76,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "4.2.4",
+            "version": "4.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "40f8c07632abcc0d6a2aeb1cec560b60e3850bbd"
+                "reference": "fe9a4e932d1008b65c165aea2b2ee599bd1fc3d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/40f8c07632abcc0d6a2aeb1cec560b60e3850bbd",
-                "reference": "40f8c07632abcc0d6a2aeb1cec560b60e3850bbd",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/fe9a4e932d1008b65c165aea2b2ee599bd1fc3d3",
+                "reference": "fe9a4e932d1008b65c165aea2b2ee599bd1fc3d3",
                 "shasum": ""
             },
             "require": {
@@ -175,7 +175,7 @@
                 "issues": "https://github.com/cakephp/cakephp/issues",
                 "source": "https://github.com/cakephp/cakephp"
             },
-            "time": "2021-02-28T01:41:14+00:00"
+            "time": "2021-04-03T01:07:40+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -794,44 +794,6 @@
             "time": "2021-02-19T21:22:57+00:00"
         },
         {
-            "name": "ozee31/cakephp-cors",
-            "version": "v2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ozee31/cakephp-cors.git",
-                "reference": "fc45012d85972b8b2a4e9af7aef57fef033d16f9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ozee31/cakephp-cors/zipball/fc45012d85972b8b2a4e9af7aef57fef033d16f9",
-                "reference": "fc45012d85972b8b2a4e9af7aef57fef033d16f9",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/cakephp": "^4.0",
-                "php": ">=7.2.0",
-                "psr/http-server-handler": "^1.0",
-                "psr/http-server-middleware": "^1.0"
-            },
-            "require-dev": {
-                "cakephp/cakephp-codesniffer": "^4.0",
-                "phpunit/phpunit": "~8.5.0"
-            },
-            "type": "cakephp-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Cors\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "A CakePHP (3.3.x) plugin for activate cors domain in your application",
-            "support": {
-                "issues": "https://github.com/ozee31/cakephp-cors/issues",
-                "source": "https://github.com/ozee31/cakephp-cors/tree/v2.0.0"
-            },
-            "time": "2020-05-14T16:20:43+00:00"
-        },
-        {
             "name": "psr/container",
             "version": "2.0.1",
             "source": {
@@ -1258,6 +1220,43 @@
                 "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "rabp99/cakephp-cors",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rabp99/cakephp-cors.git",
+                "reference": "53de1922d2e5647fc37f0045adb3498bb1a38247"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rabp99/cakephp-cors/zipball/53de1922d2e5647fc37f0045adb3498bb1a38247",
+                "reference": "53de1922d2e5647fc37f0045adb3498bb1a38247",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^4.0",
+                "php": ">=7.2.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^4.0",
+                "phpunit/phpunit": "~8.5.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Cors\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "It's a pull request from ozee31/cakephp-cors that solve the issue about OPTIONS method. A CakePHP 4 plugin for activate cors domain in your application",
+            "support": {
+                "source": "https://github.com/rabp99/cakephp-cors/tree/v3.0.0"
+            },
+            "time": "2021-01-09T16:51:42+00:00"
         },
         {
             "name": "robmorgan/phinx",
@@ -2519,16 +2518,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.0.11",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9"
+                "reference": "6c12ce263da71641903e399c3ce8ecb08fd375fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9",
-                "reference": "a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9",
+                "url": "https://api.github.com/repos/composer/composer/zipball/6c12ce263da71641903e399c3ce8ecb08fd375fb",
+                "reference": "6c12ce263da71641903e399c3ce8ecb08fd375fb",
                 "shasum": ""
             },
             "require": {
@@ -2596,7 +2595,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.0.11"
+                "source": "https://github.com/composer/composer/tree/2.0.12"
             },
             "funding": [
                 {
@@ -2612,7 +2611,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-24T13:57:23+00:00"
+            "time": "2021-04-01T08:14:59+00:00"
         },
         {
             "name": "composer/semver",
