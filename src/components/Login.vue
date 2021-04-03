@@ -33,15 +33,15 @@ export default {
   methods: {
     login() {
       axios({
-            method: 'post',
-            url: `${process.env.VUE_APP_API_URL}users/login.json`,
-            data: {
-              email: this.email,
-              password: this.password
-            }
-          })
-          .then(response => this.$store.commit('saveToken', response.data.token))
-          .catch(err => console.error(err))
+        method: 'post',
+        url: `${process.env.VUE_APP_API_URL}users/login.json`,
+        data: {
+          email: this.email,
+          password: this.password
+        }
+      })
+      .then(response => this.$store.commit('saveToken', response.data.token))
+      .catch(err => console.error(err))
     }
   }
 }
